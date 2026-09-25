@@ -1,0 +1,297 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: var(--font-sans);
+  --font-sans: "Inter Variable", sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+:root {
+  --ui-page: #f8f8f6;
+  --ui-ink: #181817;
+  --ui-surface: #fff;
+  --ui-soft: #fafaf8;
+  --ui-muted-surface: #f3f3f0;
+  --ui-line: rgb(0 0 0 / 0.1);
+  --ui-line-strong: rgb(0 0 0 / 0.15);
+  --ui-muted: rgb(0 0 0 / 0.5);
+  --ui-faint: rgb(0 0 0 / 0.35);
+  --ui-ghost: rgb(0 0 0 / 0.25);
+  --ui-on-ink: #fff;
+  --ui-preview: #181817;
+  --ui-preview-line: rgb(255 255 255 / 0.1);
+  --ui-preview-muted: rgb(255 255 255 / 0.4);
+  --ui-preview-item: rgb(255 255 255 / 0.09);
+  --ui-glow: #e5e6df;
+  --ui-accent: #4d9b6c;
+}
+.dark {
+  --ui-page: #111110;
+  --ui-ink: #f2f2ed;
+  --ui-surface: #1b1b1a;
+  --ui-soft: #191918;
+  --ui-muted-surface: #282825;
+  --ui-line: rgb(255 255 255 / 0.12);
+  --ui-line-strong: rgb(255 255 255 / 0.16);
+  --ui-muted: rgb(242 242 237 / 0.58);
+  --ui-faint: rgb(242 242 237 / 0.42);
+  --ui-ghost: rgb(242 242 237 / 0.3);
+  --ui-on-ink: #171716;
+  --ui-preview: #0d0d0c;
+  --ui-preview-line: rgb(255 255 255 / 0.14);
+  --ui-preview-muted: rgb(255 255 255 / 0.48);
+  --ui-preview-item: rgb(255 255 255 / 0.1);
+  --ui-glow: #252522;
+  --ui-accent: #78c895;
+}
+@layer utilities {
+  .theme-page {
+    background: var(--ui-page);
+    color: var(--ui-ink);
+  }
+  .theme-surface {
+    background: var(--ui-surface);
+  }
+  .theme-soft {
+    background: var(--ui-soft);
+  }
+  .theme-muted-surface {
+    background: var(--ui-muted-surface);
+  }
+  .theme-preview {
+    background: var(--ui-preview);
+    color: var(--ui-on-ink);
+  }
+  .theme-preview-item {
+    background: var(--ui-preview-item);
+  }
+  .theme-line {
+    border-color: var(--ui-line);
+  }
+  .theme-line-strong {
+    border-color: var(--ui-line-strong);
+  }
+  .theme-ink {
+    color: var(--ui-ink);
+  }
+  .theme-muted {
+    color: var(--ui-muted);
+  }
+  .theme-faint {
+    color: var(--ui-faint);
+  }
+  .theme-ghost {
+    color: var(--ui-ghost);
+  }
+  .theme-on-ink {
+    color: var(--ui-on-ink);
+  }
+  .theme-preview-muted {
+    color: var(--ui-preview-muted);
+  }
+  .theme-glow {
+    background: var(--ui-glow);
+  }
+  .theme-accent {
+    background: var(--ui-accent);
+  }
+  .theme-button {
+    background: var(--ui-ink);
+    color: var(--ui-on-ink);
+  }
+  .theme-button:hover {
+    opacity: 0.86;
+  }
+  .theme-button-secondary {
+    background: var(--ui-surface);
+    color: var(--ui-ink);
+    border-color: var(--ui-line);
+  }
+  .theme-button-secondary:hover {
+    border-color: var(--ui-line-strong);
+  }
+  .theme-input {
+    background: var(--ui-soft);
+    color: var(--ui-ink);
+    border-color: var(--ui-line);
+  }
+  .theme-input::placeholder {
+    color: var(--ui-ghost);
+  }
+  .theme-input:focus {
+    border-color: var(--ui-line-strong);
+  }
+  .theme-nav-active {
+    background: var(--ui-ink);
+    color: var(--ui-on-ink);
+  }
+  .theme-nav-idle {
+    color: var(--ui-muted);
+  }
+  .theme-nav-idle:hover {
+    color: var(--ui-ink);
+  }
+  .theme-toggle {
+    background: var(--ui-surface);
+    color: var(--ui-muted);
+    border-color: var(--ui-line);
+  }
+  .theme-toggle:hover {
+    color: var(--ui-ink);
+    border-color: var(--ui-line-strong);
+  }
+  .theme-tag {
+    background: var(--ui-muted-surface);
+    color: var(--ui-muted);
+  }
+  .theme-preview-border {
+    border-color: var(--ui-preview-line);
+  }
+  .theme-preview-chip {
+    background: rgb(255 255 255 / 0.1);
+    color: var(--ui-preview-muted);
+  }
+  .theme-preview-empty {
+    background: rgb(255 255 255 / 0.07);
+    color: var(--ui-preview-muted);
+  }
+  .theme-mock-a {
+    background: #f5e2df;
+  }
+  .theme-mock-b {
+    background: #e2e9f5;
+  }
+  .theme-mock-c {
+    background: #e3f0e5;
+  }
+  .dark .theme-mock-a {
+    background: #704b48;
+  }
+  .dark .theme-mock-b {
+    background: #4b5d78;
+  }
+  .dark .theme-mock-c {
+    background: #42664c;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
